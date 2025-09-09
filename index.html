@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M&A 2025 | Compra e Venda de Empresas – Marinho Mendes Advogados</title>
+  <meta name="description" content="Entenda M&A em 2025 com clareza: etapas, due diligence, valuation, estrutura jurídica, riscos e contratos. Página informativa conforme OAB (Prov. 205/2021) e LGPD.">
+  <meta property="og:title" content="M&A 2025 – Compra e Venda de Empresas">
+  <meta property="og:description" content="Etapas essenciais, due diligence, valuation e contratos – explicado de forma objetiva e conforme a OAB.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0a2540">
+  <style>
+    :root{
+      --brand:#0a2540;       /* navy corporativo */
+      --brand-ink:#e6eef8;
+      --accent:#bfa35a;      /* dourado sutil */
+      --ink:#0b0b0c;         /* texto principal */
+      --muted:#6b7280;       /* texto auxiliar */
+      --paper:#ffffff;
+      --bg:#f8fafc;          /* fundo suave */
+      --line:#e5e7eb;
+      --ok:#0b7a5a;          /* verde credibilidade */
+      --warn:#b45309;        /* amber */
+      --radius:16px; --rsm:12px; --shadow:0 10px 30px rgba(10,37,64,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial}
+    body{color:var(--ink);background:var(--bg)}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 16px}
+    /* HEADER */
+    .header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:12px;padding:12px 0}
+    .badge{width:36px;height:36px;border-radius:10px;background:var(--brand);color:#fff;display:grid;place-content:center;font-weight:800}
+    .nav{margin-left:auto;display:none;gap:18px}
+    @media(min-width:768px){.nav{display:flex}}
+
+    /* HERO AD-FIRST */
+    .hero{background:linear-gradient(180deg, var(--brand) 0%, #0d2f57 70%, #103660 100%);color:var(--brand-ink)}
+    .hero .wrap{display:grid;gap:28px;align-items:center;padding:56px 0}
+    @media(min-width:900px){.hero .wrap{grid-template-columns:1.1fr .9fr;padding:84px 0}}
+    .kicker{letter-spacing:.08em;font-weight:700;text-transform:uppercase;color:var(--accent)}
+    .h1{font-size:clamp(28px,4vw,48px);line-height:1.1;margin:8px 0 0}
+    .lead{opacity:.9;margin-top:10px;font-size:18px}
+    .trust{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+    .trust .pill{border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 10px;font-size:12px}
+    .cta{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+    .btn{background:#fff;color:var(--brand);border:0;border-radius:12px;padding:12px 16px;font-weight:700;cursor:pointer}
+    .btn.outline{background:transparent;border:1px solid rgba(255,255,255,.5);color:#fff}
+
+    .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
+    .section{scroll-margin-top:80px}
+    .h2{font-size:clamp(22px,3vw,32px);margin:0}
+    .muted{color:var(--muted)}
+
+    .grid-3{display:grid;gap:18px;margin-top:18px}
+    @media(min-width:860px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+    .grid-2{display:grid;gap:18px;margin-top:18px}
+    @media(min-width:860px){.grid-2{grid-template-columns:repeat(2,1fr)}}
+
+    .list{margin:10px 0 0 0;padding-left:20px}
+    .list li{margin:6px 0}
+
+    /* BARRA PROGRESSO LEITURA (atenção visual sem poluir) */
+    .progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--accent),#e9cf82);width:0;z-index:60}
+
+    /* QUALIFICAÇÃO ENXUTA (para tráfego de anúncio) */
+    .q-grid{display:grid;gap:10px}
+    @media(min-width:800px){.q-grid{grid-template-columns:repeat(2,1fr)}}
+    label.l{display:block;font-size:14px}
+    .i,.s,.t{width:100%;margin-top:6px;border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:#fff}
+    .t{min-height:90px;resize:vertical}
+    .check{display:flex;gap:8px;align-items:flex-start}
+    .notice{border-radius:12px;padding:12px 16px;font-size:14px;margin-top:12px}
+    .ok{background:#ecfdf5;border:1px solid #a7f3d0;color:#064e3b}
+    .warn{background:#fffbeb;border:1px solid #fde68a;color:#7c2d12}
+
+    /* TIMELINE COM ÍCONES (SVG inline) */
+    .tl{display:grid;gap:14px;margin-top:16px}
+    .tile{display:flex;gap:12px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}
+    .ico{flex:0 0 36px;height:36px;border-radius:9px;display:grid;place-content:center;background:#f1f5f9}
+
+    /* FOOTER */
+    footer{border-top:1px solid var(--line);background:#fff}
+    .foot{display:grid;gap:16px}
+    @media(min-width:860px){.foot{grid-template-columns:repeat(3,1fr)}}
+
+    :focus{outline:none}
+    :focus-visible{box-shadow:0 0 0 3px rgba(191,163,90,.35)}
+  
+    /* ==== IMAGEM: SLOTS COM TAMANHOS RECOMENDADOS ==== */
+    .img-slot{position:relative;display:block;width:100%;background:repeating-linear-gradient(45deg,#eef2f7 0 14px,#f7f9fc 14px 28px);border:1px dashed var(--line);border-radius:var(--radius);overflow:hidden}
+    .img-slot::before{content:"";display:block;aspect-ratio:16/9}
+    .ratio-4-3::before{aspect-ratio:4/3}
+    .ratio-3-2::before{aspect-ratio:3/2}
+    .ratio-21-9::before{aspect-ratio:21/9}
+    .ratio-7-5::before{aspect-ratio:7/5}
+    .img-slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .slot-label{position:absolute;left:8px;right:8px;bottom:8px;background:rgba(10,37,64,.85);color:#fff;padding:6px 8px;border-radius:10px;font-size:12px;line-height:1.3}
+  
+    /* ===== Melhorias de tipografia/espaçamento ===== */
+    .card > * + * { margin-top: 12px; }
+    .muted { line-height: 1.7; }
+    .list li { margin: 8px 0; }
+    .rich p + p { margin-top: 10px; }
+
+    /* Destaque de título (hero aside) */
+    .emphasis-title { font-size:22px !important; color:var(--brand); position:relative; padding-left:10px; }
+    .emphasis-title::before { content:""; position:absolute; left:0; top:6px; bottom:6px; width:4px; background:var(--accent); border-radius:4px; }
+
+    /* Botão CTA (formulário) */
+    .btn.cta-primary, #btn-enviar { background:linear-gradient(135deg,var(--accent),#e9cf82); color:#0a2540; font-weight:800; letter-spacing:.2px; box-shadow:0 8px 20px rgba(191,163,90,.35); }
+    #btn-enviar { border:0; border-radius:14px; padding:14px 18px; }
+    .btn.cta-primary:hover, #btn-enviar:hover { transform:translateY(-1px); box-shadow:0 10px 24px rgba(191,163,90,.4); }
+    .btn.cta-primary:active, #btn-enviar:active { transform:translateY(0); box-shadow:0 6px 16px rgba(191,163,90,.3); }
+
+    /* Redes sociais */
+    .social{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:10px}
+    .social a{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:12px;background:#fff}
+    .social svg{width:18px;height:18px;display:block}
+  
+    /* ===== Ajustes finos de espaçamento – Aspectos & Riscos ===== */
+    #aspectos .card{padding:28px}
+    #aspectos .card .muted{line-height:1.8}
+    #aspectos .list li{margin:10px 0}
+    #riscos .card{padding:28px}
+    #riscos .card .muted{line-height:1.8}
+    #riscos .list li{margin:10px 0}
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <header class="header">
+    <div class="container brand">
+  <a href="https://marinhomendes.adv.br/" style="display:flex;align-items:center;gap:12px;text-decoration:none">
+    <img src="img/Logo5.jpg" alt="Logo Marinho Mendes" class="badge" style="object-fit:contain;background:transparent;border:none;box-shadow:none;" width="36" height="36" aria-hidden="true">
+    <div>
+      <div style="font-weight:800;color:inherit">Marinho Mendes Advogados</div>
+      <div class="muted" style="font-size:12px">Conteúdo informativo • Prov. OAB 205/2021</div>
+    </div>
+  </a>
+  <link rel="icon" type="image/png" href="img/Logo5.jpg">
+      <nav class="nav" aria-label="Navegação">
+        <a href="#informativo">Informativo</a>
+        <a href="#etapas">Etapas</a>
+        <a href="#riscos">Riscos</a>
+        <a href="#avaliar">Avaliar</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO DIRECT-RESPONSE -->
+  <section class="hero">
+    <div class="container wrap">
+      <div>
+        <div class="kicker">M&A • 2025</div>
+        <h1 class="h1">Compra e Venda de Empresas – direto ao ponto</h1>
+        <p class="lead">O que realmente importa para decidir e executar uma operação com segurança: <strong>due diligence</strong>, <strong>valuation</strong>, <strong>estrutura jurídica</strong>, <strong>alocação de riscos</strong> e <strong>contratos eficazes</strong>.</p>
+        <div class="trust" role="list">
+          <span class="pill" role="listitem">Informativo (OAB)</span>
+          <span class="pill" role="listitem">LGPD: consentimento explícito</span>
+          <span class="pill" role="listitem">Foco: operações societárias e contratuais</span>
+        </div>
+        <div class="cta">
+          <a class="btn" href="#avaliar">Avaliar viabilidade</a>
+          <a class="btn outline" href="#informativo">Ver o essencial</a>
+          <a class="btn outline" href="https://www.marinhomendes.adv.br/blog/mea-em-2025/" target="_blank" rel="noopener noreferrer">Ler no Blog</a>
+        </div>
+      </div>
+      <aside>
+        <!-- HERO IMAGE SLOT | Exibição 560×420px • Envie 1120×840px (2×) -->
+        <figure class="img-slot ratio-4-3" style="max-width:560px;margin:0 0 14px 0">
+          <img src="img/hero.png" alt="Imagem institucional/tema M&A" loading="lazy">
+        </figure>
+        <article class="card" aria-labelledby="bloco-cred">
+          <h2 id="bloco-cred" class="h2 emphasis-title">Essencial de M&A</h2>
+          <ul class="list muted">
+            <li><strong>Por que importa:</strong> crescimento, sucessão, consolidação, diversificação e reestruturação.</li>
+            <li><strong>Formatos:</strong> compra de quotas/ações, <em>trespasse</em> (ativos) e operações (fusão/cisão/incorporação).</li>
+            <li><strong>Chaves do preço:</strong> FCD, múltiplos de EBITDA, patrimônio e <em>goodwill</em>.</li>
+            <li><strong>Proteção jurídica:</strong> declarações/garantias, indenizações, <em>escrow</em>, ajustes pós-fechamento.</li>
+          </ul>
+        </article>
+      </aside>
+    </div>
+  </section>
+
+  <!-- BLOCOS DIRETOS (AD-FRIENDLY) -->
+  <section id="informativo" class="section" style="padding:48px 0">
+    <div class="container">
+      <h2 class="h2">Compra e Venda de Empresas — direto ao ponto</h2>
+      <div class="grid-2">
+        <article class="card">
+          <strong>O que é e por que importa</strong>
+          <ul class="list muted">
+            <li>Operações de M&A (mergers & acquisitions) transferem controle ou ativos entre empresas.</li>
+            <li>Objetivos: expansão, sucessão, consolidação de mercado, diversificação e reestruturação.</li>
+            <li>Instrumentos usuais: compra de quotas/ações, <em>trespasse</em> (ativos), fusão, cisão e incorporação.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <strong>O que define preço e segurança</strong>
+          <ul class="list muted">
+            <li><b>Valuation</b>: FCD, múltiplos de EBITDA, patrimônio e <em>goodwill</em>.</li>
+            <li><b>Governança & compliance</b>: organização societária, fiscal e contábil.</li>
+            <li><b>Proteção contratual</b>: declarações/garantias, indenizações, <em>escrow</em> e ajustes pós‑fechamento.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="tl">
+        <div class="tile">
+          <div class="ico" aria-hidden="true">🔎</div>
+          <div>
+            <strong>Due diligence objetiva</strong>
+            <div class="muted">Auditoria jurídica, contábil e financeira para mapear passivos trabalhistas, tributários, ambientais e contratuais.</div>
+          </div>
+        </div>
+        <div class="tile">
+          <div class="ico" aria-hidden="true">💸</div>
+          <div>
+            <strong>Valuation com premissas auditáveis</strong>
+            <div class="muted">Preço baseado em dados e sensibilidade; pode incluir earn‑out vinculado a metas.</div>
+          </div>
+        </div>
+        <div class="tile">
+          <div class="ico" aria-hidden="true">📑</div>
+          <div>
+            <strong>Contratos que alocam riscos</strong>
+            <div class="muted">LOI/MoU, SPA/QPA e acordos colaterais (não concorrência, confidencialidade, permanência de sócios).</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA VISUAL (AD FOCUS) -->
+  <section id="galeria" class="section" style="padding:40px 0">
+    <div class="container">
+      <h2 class="h2">Ambiente de M&A — imagens institucionais</h2>
+      <p class="muted">Negociação, auditoria e governança são processos técnicos e colaborativos. Utilize imagens neutras e autorais (reuniões executivas, análise documental, dados) para reforçar credibilidade, sem divulgação de casos/resultados.</p>
+      <div class="grid-3" style="margin-top:14px" style="margin-top:14px">
+        <!-- CARD 1 | Exibição 420×280px • Envie 840×560px (2×) -->
+        <figure class="img-slot ratio-3-2">
+          <img src="img/020-marinho-mendes-advogados.jpg" alt="Sala de reuniões corporativa" loading="lazy" width="420" height="280">
+        </figure>
+        <!-- CARD 2 | Exibição 420×280px • Envie 840×560px (2×) -->
+        <figure class="img-slot ratio-3-2">
+          <img src="img/docs.png" alt="Documentos e assinatura" loading="lazy" width="420" height="280">
+        </figure>
+        <!-- CARD 3 | Exibição 420×280px • Envie 840×560px (2×) -->
+        <figure class="img-slot ratio-3-2">
+          <img src="img/dados.png" alt="Equipe analisando dados" loading="lazy" width="420" height="280">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CENÁRIO 2025 (BRASIL) -->
+  <section id="cenario" class="section" style="padding:40px 0">
+    <div class="container">
+      <h2 class="h2">Cenário de M&A no Brasil em 2025</h2>
+      <div class="grid-2">
+        <article class="card">
+          <strong>Onde está o movimento</strong>
+          <ul class="list muted">
+            <li>PMEs em sucessão familiar e empresas em reestruturação.</li>
+            <li>Startups com tecnologia escalável e dados auditáveis.</li>
+            <li>Setores: agronegócio, saúde, educação, energia e e‑commerce.</li>
+            <li>Investidores nacionais e internacionais buscam governança e segurança jurídica.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <strong>Como se preparar</strong>
+          <ul class="list muted">
+            <li>Organização societária, contábil e fiscal antes da oferta.</li>
+            <li>Data room e checklist regulatório por área.</li>
+            <li>Plano de integração pós‑fechamento (operações/cultura).</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODALIDADES JURÍDICAS -->
+  <section id="modalidades" class="section" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:40px 0">
+    <div class="container">
+      <h2 class="h2">Modalidades jurídicas de aquisição</h2>
+      <div class="grid-3">
+        <article class="card"><strong>Participações societárias</strong><div class="muted">Compra de quotas/ações com sucessão em direitos e obrigações.</div></article>
+        <article class="card"><strong>Trespasse (ativos)</strong><div class="muted">Transferência do estabelecimento (bens, contratos, intangíveis, alvarás).</div></article>
+        <article class="card"><strong>Fusão / Incorporação / Cisão</strong><div class="muted">Reestruturação conforme objetivo e perfil de risco.</div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASPECTOS LEGAIS, FISCAIS E TRABALHISTAS -->
+  <section id="aspectos" class="section" style="padding:40px 0">
+    <div class="container">
+      <h2 class="h2">Aspectos legais, fiscais e trabalhistas</h2>
+      <div class="grid-2">
+        <ul class="card list muted">
+          <li>Possível herança de dívidas e litígios (tributário, trabalhista, ambiental, consumerista).</li>
+          <li>Clareza do objeto da compra; identificação de contratos e licenças.</li>
+          <li>Cláusulas de proteção: declarações/garantias, indenizações, <em>escrow</em>, ajustes pós‑fechamento.</li>
+          <li>Governança e compliance como diferenciais de valor.</li>
+        </ul>
+        <div class="card">
+          <strong>Trespasse & fundo de comércio</strong>
+          <p class="muted">O trespasse transfere o estabelecimento (bens materiais e intangíveis) e pode exigir notificação de credores, revisão contratual e regularizações. O <em>goodwill</em> (fundo de comércio) inclui marca, clientela, equipe, know‑how e ponto: componente relevante no valuation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUE ACOMPANHAMENTO JURÍDICO -->
+  <section id="acompanhamento" class="section" style="padding:40px 0">
+    <div class="container">
+      <h2 class="h2">Por que ter acompanhamento jurídico no M&A</h2>
+      <div class="grid-2">
+        <!-- Exibição 700×500px • Envie 1400×1000px (2×) -->
+        <figure class="img-slot ratio-7-5">
+          <img src="img/acompanhamento.png" alt="Assessoria jurídica em M&A" loading="lazy" width="700" height="500">
+        </figure>
+        <div class="card rich">
+          <ul class="list muted">
+            <li><b>Mapeamento de riscos:</b> identificar passivos ocultos e cláusulas críticas antes do fechamento.</li>
+            <li><b>Negociação técnica:</b> LOI/MoU e SPA/QPA com alocação eficiente de riscos, garantias e indenizações.</li>
+            <li><b>Compliance e governança:</b> adequação documental e regulatória que influencia preço e condições.</li>
+            <li><b>Pós-fechamento seguro:</b> mecanismos de <em>escrow</em>, earn‑out e integrações contratuais.</li>
+          </ul>
+          <p class="muted">Leitura complementar: <a href="https://www.marinhomendes.adv.br/blog/por-que-voce-precisa-de-um-advogado-na-compra-e-venda-de-empresas/" target="_blank" rel="noopener">Por que você precisa de um advogado na compra e venda de empresas</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ETAPAS (RESUMO ULTRADIRETO) -->
+  <section id="etapas" class="section" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:48px 0">
+    <div class="container">
+      <h2 class="h2">Etapas fundamentais</h2>
+      <div class="grid-3">
+        <article class="card"><strong>1) Preparação</strong><div class="muted">Organização societária, contábil e fiscal. Sala de dados e checklist regulatório.</div></article>
+        <article class="card"><strong>2) Due diligence</strong><div class="muted">Auditoria legal/contábil/financeira. Passivos, contratos e contingências.</div></article>
+        <article class="card"><strong>3) Valuation</strong><div class="muted">Preço baseado em FCD, múltiplos e patrimônio; métricas e premissas auditáveis.</div></article>
+        <article class="card"><strong>4) Negociação</strong><div class="muted">Condições, garantias, declarações, indenizações e mecanismos de ajuste.</div></article>
+        <article class="card"><strong>5) Fechamento</strong><div class="muted">Condições precedentes, <em>escrow</em> e formalidades.</div></article>
+        <article class="card"><strong>6) Pós-fechamento</strong><div class="muted">Integração operacional/cultural, earn‑outs e regularizações.</div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER INSTITUCIONAL (FULL CONTAINER) -->
+  <section id="banner" class="section" style="padding:0">
+    <div class="container" style="padding:24px 16px">
+      <!-- Exibição ~1100×360px • Envie 2200×720px (2×) -->
+      <figure class="img-slot ratio-21-9">
+  <img src="img/BannerMM.png" alt="Banner institucional do escritório" loading="lazy" width="1100" height="360">
+      </figure>
+    </div>
+  </section>
+
+  <!-- RISCOS & CUIDADOS (VISUAL STRONG) -->
+  <section id="riscos" class="section" style="padding:48px 0">
+    <div class="container">
+      <h2 class="h2">Erros caros a evitar</h2>
+      <div class="grid-2">
+        <ul class="card list muted">
+          <li>Due diligence superficial (ou inexistente).</li>
+          <li>Valuation sem testar premissas e sensibilidade.</li>
+          <li>Contratos sem alocação clara de riscos.</li>
+          <li>Ausência de garantias/indenizações e <em>escrow</em>.</li>
+          <li>Descuidos com sucessão de obrigações no trespasse.</li>
+        </ul>
+        <div class="card">
+          <strong>Boas práticas</strong>
+          <ul class="list muted">
+            <li>Matriz de riscos por área (trabalhista, tributária, ambiental, regulatória).</li>
+            <li>Data room organizado e trilhas de auditoria.</li>
+            <li>Checklist documental por modalidade (quotas/ações, ativos, fusão/cisão/incorp.).</li>
+            <li>Plano de integração pós‑fechamento (operacional/cultural).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVALIAÇÃO (FORM ENXUTO, AD-FRIENDLY) -->
+  <section id="avaliar" class="section" style="background:#fff;border-top:1px solid var(--line);padding:48px 0">
+    <div class="container">
+      <h2 class="h2">Avalie seu enquadramento em 60 segundos</h2>
+      <p class="muted">Preencha os campos essenciais. O envio não cria relação cliente‑advogado. Consentimento LGPD é obrigatório.</p>
+      <form id="lead" class="card" novalidate>
+        <div class="q-grid">
+          <div>
+            <label class="l" for="nome">Nome</label>
+            <input id="nome" class="i" required>
+          </div>
+          <div>
+            <label class="l" for="email">E‑mail</label>
+            <input id="email" class="i" type="email" required>
+          </div>
+          <div>
+            <label class="l" for="operacao">Tipo de operação</label>
+            <select id="operacao" class="s" required>
+              <option value="" disabled selected>Selecione…</option>
+              <option>Compra de participação</option>
+              <option>Venda 100% da empresa</option>
+              <option>Trespasse (ativos)</option>
+              <option>Fusão / Cisão / Incorporação</option>
+            </select>
+          </div>
+          <div>
+            <label class="l" for="faturamento">Faturamento anual</label>
+            <select id="faturamento" class="s" required>
+              <option value="" disabled selected>Selecione…</option>
+              <option>&lt; R$ 3 mi</option>
+              <option>R$ 3–10 mi</option>
+              <option>&gt; R$ 10 mi</option>
+            </select>
+          </div>
+          <div>
+            <label class="l" for="urgencia">Urgência</label>
+            <select id="urgencia" class="s" required>
+              <option value="" disabled selected>Selecione…</option>
+              <option>Até 60 dias</option>
+              <option>60–120 dias</option>
+              <option>&gt; 120 dias</option>
+            </select>
+          </div>
+          <div>
+            <label class="l" for="orcamento">Orçamento jurídico</label>
+            <select id="orcamento" class="s" required>
+              <option value="" disabled selected>Selecione…</option>
+              <option>&lt; R$ 30 mil</option>
+              <option>R$ 30–60 mil</option>
+              <option>&gt; R$ 60 mil</option>
+            </select>
+          </div>
+          <div style="grid-column:1/-1">
+            <label class="l" for="mensagem">Contexto (opcional)</label>
+            <textarea id="mensagem" class="t" placeholder="Ex.: venda total, passivos relevantes, prazo, governança, setor"></textarea>
+          </div>
+          <label class="check" style="grid-column:1/-1"><input id="lgpd" type="checkbox"> <span class="muted">Li e concordo com o tratamento de dados para finalidade de atendimento (LGPD).</span></label>
+          <label class="check" style="grid-column:1/-1"><input id="relacao" type="checkbox"> <span class="muted">Estou ciente de que este contato não cria relação cliente‑advogado.</span></label>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+          <div class="muted">Aderência estimada: <strong id="pontos">0</strong> / 10</div>
+          <div style="display:flex;gap:10px">
+            <button type="button" class="btn outline" id="btn-info">Quero material informativo</button>
+            <button type="submit" class="btn cta-primary" id="btn-enviar" disabled>Solicitar avaliação</button>
+          </div>
+        </div>
+        <div id="ret" class="notice warn" style="display:none"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- SOBRE O ESCRITÓRIO (IMAGEM INSTITUCIONAL) -->
+  <section id="sobre" class="section" style="background:#fff;border-top:1px solid var(--line);padding:48px 0">
+    <div class="container">
+      <h2 class="h2">Sobre o escritório</h2>
+      <div class="grid-2">
+        <div class="card rich">
+          <p class="muted"><strong>Atuação consultiva e contratual em M&A e societário</strong>, com foco em governança, mitigação de riscos e conformidade.</p>
+          <p class="muted">Trabalhamos na estruturação de operações (compra e venda de quotas/ações, trespasse, fusão, cisão e incorporação), preparação de empresas para due diligence, negociação e redação de LOI/MoU, SPA/QPA e acordos colaterais (não concorrência, confidencialidade, earn‑out, permanência de sócios).</p>
+          <ul class="list muted">
+            <li><b>Governança & compliance:</b> alinhamento societário, fiscal e contábil, políticas e matriz de riscos.</li>
+            <li><b>Data room & auditoria:</b> organização documental, trilhas de auditoria e respostas a Q&A.</li>
+            <li><b>Alocação de riscos:</b> declarações/garantias, indenizações, <em>escrow</em> e ajustes pós‑fechamento.</li>
+          </ul>
+          <p class="muted"><em>Conteúdo informativo; não divulgamos casos, resultados ou êxitos.</em></p>
+          <div class="social">
+            <a href="https://www.facebook.com/marinhomendesadv" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.07C22 6.48 17.52 2 11.93 2S1.86 6.48 1.86 12.07c0 5.03 3.68 9.2 8.49 9.99v-7.07H7.9v-2.92h2.45V9.41c0-2.42 1.44-3.76 3.64-3.76 1.06 0 2.17.19 2.17.19v2.39h-1.22c-1.2 0-1.58.75-1.58 1.52v1.83h2.69l-.43 2.92h-2.26v7.07c4.81-.79 8.49-4.96 8.49-9.99z"/></svg>
+              <span>Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/marinhomendesadv" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm11.5 2.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5z"/></svg>
+              <span>Instagram</span>
+            </a>
+            <a href="https://www.linkedin.com/company/14030512/admin/dashboard/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V23h-4V8zm7 0h3.8v2.05h.05C12.1 8.74 13.9 8 15.9 8 20 8 23 10.7 23 16.1V23h-4v-6c0-3.1-1.1-5.2-3.9-5.2-2.1 0-3.3 1.4-3.8 2.7-.2.4-.2 1-.2 1.6V23H7.5V8z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+        <!-- Exibição 800×600px • Envie 1600×1200px (2×) -->
+        <figure class="img-slot ratio-4-3">
+          <img src="img/018-1-marinho-mendes-advogados.jpg" alt="Imagem institucional do escritório" loading="lazy" width="800" height="600">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="padding:28px 0">
+      <div class="foot">
+        <div>
+          <strong>Marinho Mendes Sociedade de Advogados</strong>
+          <p class="muted">Conteúdo informativo, conforme Prov. OAB 205/2021. Sem promessa de resultado. Contato não gera relação cliente-advogado.</p>
+          <p class="muted">E-mail: <a href="mailto:adm@marinhomendes.adv.br">adm@marinhomendes.adv.br</a><br>Fone/Fax: (19) 3845-4946<br>WhatsApp: <a href="https://wa.me/5519974100605" target="_blank" rel="noopener">(19) 97410-0605</a></p>
+        </div>
+        <div>
+          <strong>Endereços</strong>
+          <p class="muted"><b>Campinas/SP</b><br>Av. Jose Rocha Bonfim, 214 – Bloco J, Sala 228 – Edifício Milão – Praça Capital<br>Loteamento Center Santa Genebra – CEP 13080-650</p>
+          <p class="muted"><b>Hortolândia/SP</b><br>Rua Antônio Nelson Barbosa, 93 – Jardim do Bosque – CEP 13186-231</p>
+          <p class="muted">Horário: Dias úteis 08:30–18:00</p>
+        </div>
+        <div>
+          <strong>Leituras & Recursos</strong>
+          <ul class="muted list">
+            <li><a href="https://www.marinhomendes.adv.br/blog/mea-em-2025/" target="_blank" rel="noopener">M&A em 2025 (Blog)</a></li>
+            <li><a href="https://www.marinhomendes.adv.br/blog/compra-e-venda-de-empresas-em-2025/" target="_blank" rel="noopener">Compra e Venda de Empresas 2025 (Guia)</a></li>
+            <li><a href="https://marinhomendes.adv.br/contato/" target="_blank" rel="noopener">Contato oficial</a></li>
+          </ul>
+        </div>
+        <div>
+          <strong>Avisos</strong>
+          <ul class="muted list">
+            <li>Contato via formulário não cria relação cliente‑advogado.</li>
+            <li>O tratamento de dados observa a LGPD.</li>
+          </ul>
+        </div>
+        <div style="grid-column:1/-1;text-align:center;margin-top:10px">
+          <p class="muted">© <span id="year"></span> Marinho Mendes Sociedade de Advogados. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const $ = (s, r=document)=>r.querySelector(s);
+    const $$ = (s, r=document)=>Array.from(r.querySelectorAll(s));
+
+    // Ano
+    $('#year').textContent = new Date().getFullYear();
+
+    // Barra de progresso de leitura
+    const bar = $('#progress');
+    addEventListener('scroll', ()=>{
+      const h = document.documentElement;
+      const t = h.scrollTop;
+      const m = h.scrollHeight - h.clientHeight;
+      bar.style.width = (t/m*100)+'%';
+    }, {passive:true});
+
+    // Lead form com score simples (rápido para tráfego de anúncio)
+    const f = {
+      nome: $('#nome'), email: $('#email'), operacao: $('#operacao'), faturamento: $('#faturamento'), urgencia: $('#urgencia'), orcamento: $('#orcamento'), mensagem: $('#mensagem'), lgpd: $('#lgpd'), relacao: $('#relacao')
+    };
+    const pontos = $('#pontos');
+    const ret = $('#ret');
+    const btnEnviar = $('#btn-enviar');
+
+    function score(){
+      let s=0;
+      if(f.faturamento.value==='> R$ 10 mi') s+=3; else if(f.faturamento.value==='R$ 3–10 mi') s+=2; else if(f.faturamento.value) s+=1;
+      if(['Compra de participação','Venda 100% da empresa'].includes(f.operacao.value)) s+=3; else if(f.operacao.value==='Trespasse (ativos)') s+=2; else if(f.operacao.value) s+=1;
+      if(f.urgencia.value==='Até 60 dias') s+=2; else if(f.urgencia.value==='60–120 dias') s+=1;
+      if(f.orcamento.value==='> R$ 60 mil') s+=2; else if(f.orcamento.value==='R$ 30–60 mil') s+=1;
+      return s; // 0–10
+    }
+
+    function update(){
+      pontos.textContent = score();
+      const ready = f.nome.value && f.email.value && f.operacao.value && f.faturamento.value && f.urgencia.value && f.orcamento.value && f.lgpd.checked && f.relacao.checked;
+      btnEnviar.disabled = !ready;
+    }
+
+    $$('#lead input, #lead select, #lead textarea').forEach(el=>{
+      el.addEventListener('input', update);
+      el.addEventListener('change', update);
+    });
+    update();
+
+    // CTA "material informativo" (nutrição) – sem capturar quem não quer assessoria agora
+    $('#btn-info').addEventListener('click', ()=>{
+      ret.className='notice warn';
+      ret.style.display='block';
+      ret.textContent='Enviaremos materiais educativos sobre M&A (guia e checklist) para leitura. Caso o projeto evolua, estaremos à disposição.';
+    });
+
+    // Envio – integre com CRM/endpoint
+    $('#lead').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      if(btnEnviar.disabled) return;
+      const payload = {
+        nome:f.nome.value, email:f.email.value, operacao:f.operacao.value, faturamento:f.faturamento.value, urgencia:f.urgencia.value, orcamento:f.orcamento.value, mensagem:f.mensagem.value, lgpd:f.lgpd.checked, relacao:f.relacao.checked, score:score(), origem:'LP-MA-Ads-2025'
+      };
+      console.log('lead-submission', payload); // SUBSTITUA por fetch('ENDPOINT', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)})
+
+      const aderente = payload.score>=7;
+      ret.style.display='block';
+      if(aderente){
+        ret.className='notice ok';
+        ret.textContent='Obrigado! Seu caso parece alinhado ao escopo. Um(a) advogado(a) entrará em contato para agendar uma conversa inicial.';
+      } else {
+        ret.className='notice warn';
+        ret.textContent='Obrigado! Você receberá um material educativo para se preparar. Se o projeto avançar, retorne quando desejar.';
+      }
+      // opcional: limpar campos não essenciais
+      // e.target.reset(); update();
+    });
+  </script>
+</body>
+</html>
