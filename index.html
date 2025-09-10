@@ -126,6 +126,14 @@
     #riscos .card{padding:28px}
     #riscos .card .muted{line-height:1.8}
     #riscos .list li{margin:10px 0}
+
+    /* ==== PROVA SOCIAL (efeito visual único e conforme OAB) ==== */
+    .case{position:relative;overflow:hidden}
+    .case::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(1200px 300px at -10% -10%, rgba(191,163,90,.15), transparent 70%)}
+    .case .tag{display:inline-block;font-size:12px;padding:4px 8px;border-radius:999px;border:1px solid var(--line);background:#fff;margin-bottom:8px}
+    .case h3{margin:0 0 4px 0;font-size:18px}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+    .meta span{display:inline-flex;gap:6px;align-items:center}
   </style>
 </head>
 <body>
@@ -144,6 +152,7 @@
         <a href="#informativo">Informativo</a>
         <a href="#etapas">Etapas</a>
         <a href="#riscos">Riscos</a>
+        <a href="#prova">Prova social</a>
         <a href="#avaliar">Avaliar</a>
       </nav>
     </div>
@@ -355,7 +364,7 @@
     <div class="container" style="padding:24px 16px">
       <!-- Exibição ~1100×360px • Envie 2200×720px (2×) -->
       <figure class="img-slot ratio-21-9">
-  <img src="img/BannerMM.png" alt="Banner institucional do escritório" loading="lazy" width="1100" height="360">
+        <img src="img/BannerMM.png" alt="Banner institucional do escritório" loading="lazy" width="1100" height="360">
       </figure>
     </div>
   </section>
@@ -382,6 +391,47 @@
           </ul>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- PROVA SOCIAL (conforme OAB) -->
+  <section id="prova" class="section" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:44px 0">
+    <div class="container">
+      <h2 class="h2">Cenários ilustrativos (anonimizados)</h2>
+      <p class="muted">Exemplos didáticos de escopos de atuação em M&A, <b>sem menção a clientes, decisões ou resultados</b>, em conformidade com o Prov. OAB 205/2021. Finalidade exclusivamente informativa.</p>
+      <div class="grid-3">
+        <article class="card case" aria-labelledby="c1">
+          <span class="tag">PME • Sucessão</span>
+          <h3 id="c1">Compra de participação minoritária</h3>
+          <ul class="list muted">
+            <li><b>Desafio:</b> sócio fundador em transição; governança incipiente.</li>
+            <li><b>Abordagem:</b> reorganização societária prévia, acordo de sócios e LOI com condições precedentes.</li>
+            <li><b>Instrumentos:</b> LOI, <abbr title="Share Purchase Agreement">SPA</abbr>, acordo de quotistas, cláusulas de não concorrência.</li>
+          </ul>
+          <div class="meta"><span>⚖️ societário</span><span>🧭 governança</span></div>
+        </article>
+        <article class="card case" aria-labelledby="c2">
+          <span class="tag">Trespasse • Regulado</span>
+          <h3 id="c2">Aquisição de ativos e contratos</h3>
+          <ul class="list muted">
+            <li><b>Desafio:</b> transferência de estabelecimento com licenças e contratos públicos.</li>
+            <li><b>Abordagem:</b> notificação de credores, novação contratual e matriz de riscos regulatórios.</li>
+            <li><b>Instrumentos:</b> contrato de trespasse, anexos de ativos, cessões e aditivos.</li>
+          </ul>
+          <div class="meta"><span>📄 contratos</span><span>🧩 regulatório</span></div>
+        </article>
+        <article class="card case" aria-labelledby="c3">
+          <span class="tag">Middle market</span>
+          <h3 id="c3">Venda 100% com <em>escrow</em> e <em>earn‑out</em></h3>
+          <ul class="list muted">
+            <li><b>Desafio:</b> alocação de riscos trabalhistas e tributários.</li>
+            <li><b>Abordagem:</b> due diligence objetiva, declarações/garantias e ajustes pós‑fechamento.</li>
+            <li><b>Instrumentos:</b> <abbr title="Sale and Purchase Agreement">SPA</abbr>, acordo de transição, <em>escrow</em>, cláusulas de indenização.</li>
+          </ul>
+          <div class="meta"><span>🔎 due diligence</span><span>💼 M&A</span></div>
+        </article>
+      </div>
+      <p class="muted" style="font-size:12px;margin-top:10px">Este material não constitui promessa de resultado nem oferta de serviços. Casos reais somente são discutidos de forma anonimizada e sem qualquer referência a decisões ou desfechos.</p>
     </div>
   </section>
 
@@ -428,15 +478,6 @@
               <option>&gt; 120 dias</option>
             </select>
           </div>
-          <div>
-            <label class="l" for="orcamento">Orçamento jurídico</label>
-            <select id="orcamento" class="s" required>
-              <option value="" disabled selected>Selecione…</option>
-              <option>&lt; R$ 30 mil</option>
-              <option>R$ 30–60 mil</option>
-              <option>&gt; R$ 60 mil</option>
-            </select>
-          </div>
           <div style="grid-column:1/-1">
             <label class="l" for="mensagem">Contexto (opcional)</label>
             <textarea id="mensagem" class="t" placeholder="Ex.: venda total, passivos relevantes, prazo, governança, setor"></textarea>
@@ -445,7 +486,7 @@
           <label class="check" style="grid-column:1/-1"><input id="relacao" type="checkbox"> <span class="muted">Estou ciente de que este contato não cria relação cliente‑advogado.</span></label>
         </div>
         <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
-          <div class="muted">Aderência estimada: <strong id="pontos">0</strong> / 10</div>
+          <div class="muted">Aderência estimada: <strong id="pontos">0</strong> / 8</div>
           <div style="display:flex;gap:10px">
             <button type="button" class="btn outline" id="btn-info">Quero material informativo</button>
             <button type="submit" class="btn cta-primary" id="btn-enviar" disabled>Solicitar avaliação</button>
@@ -547,7 +588,7 @@
 
     // Lead form com score simples (rápido para tráfego de anúncio)
     const f = {
-      nome: $('#nome'), email: $('#email'), operacao: $('#operacao'), faturamento: $('#faturamento'), urgencia: $('#urgencia'), orcamento: $('#orcamento'), mensagem: $('#mensagem'), lgpd: $('#lgpd'), relacao: $('#relacao')
+      nome: $('#nome'), email: $('#email'), operacao: $('#operacao'), faturamento: $('#faturamento'), urgencia: $('#urgencia'), mensagem: $('#mensagem'), lgpd: $('#lgpd'), relacao: $('#relacao')
     };
     const pontos = $('#pontos');
     const ret = $('#ret');
@@ -558,13 +599,12 @@
       if(f.faturamento.value==='> R$ 10 mi') s+=3; else if(f.faturamento.value==='R$ 3–10 mi') s+=2; else if(f.faturamento.value) s+=1;
       if(['Compra de participação','Venda 100% da empresa'].includes(f.operacao.value)) s+=3; else if(f.operacao.value==='Trespasse (ativos)') s+=2; else if(f.operacao.value) s+=1;
       if(f.urgencia.value==='Até 60 dias') s+=2; else if(f.urgencia.value==='60–120 dias') s+=1;
-      if(f.orcamento.value==='> R$ 60 mil') s+=2; else if(f.orcamento.value==='R$ 30–60 mil') s+=1;
-      return s; // 0–10
+      return s; // 0–8
     }
 
     function update(){
       pontos.textContent = score();
-      const ready = f.nome.value && f.email.value && f.operacao.value && f.faturamento.value && f.urgencia.value && f.orcamento.value && f.lgpd.checked && f.relacao.checked;
+      const ready = f.nome.value && f.email.value && f.operacao.value && f.faturamento.value && f.urgencia.value && f.lgpd.checked && f.relacao.checked;
       btnEnviar.disabled = !ready;
     }
 
@@ -586,11 +626,11 @@
       e.preventDefault();
       if(btnEnviar.disabled) return;
       const payload = {
-        nome:f.nome.value, email:f.email.value, operacao:f.operacao.value, faturamento:f.faturamento.value, urgencia:f.urgencia.value, orcamento:f.orcamento.value, mensagem:f.mensagem.value, lgpd:f.lgpd.checked, relacao:f.relacao.checked, score:score(), origem:'LP-MA-Ads-2025'
+        nome:f.nome.value, email:f.email.value, operacao:f.operacao.value, faturamento:f.faturamento.value, urgencia:f.urgencia.value, mensagem:f.mensagem.value, lgpd:f.lgpd.checked, relacao:f.relacao.checked, score:score(), origem:'LP-MA-Ads-2025'
       };
       console.log('lead-submission', payload); // SUBSTITUA por fetch('ENDPOINT', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)})
 
-      const aderente = payload.score>=7;
+      const aderente = payload.score>=6; // 75% de 8 pontos
       ret.style.display='block';
       if(aderente){
         ret.className='notice ok';
